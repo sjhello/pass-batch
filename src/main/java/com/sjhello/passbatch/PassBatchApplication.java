@@ -17,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import lombok.extern.log4j.Log4j2;
 
-@EnableBatchProcessing
 @SpringBootApplication
 @RequiredArgsConstructor
 @Log4j2

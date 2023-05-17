@@ -33,7 +33,7 @@ public class AddPassesTasklet implements Tasklet {
 	private final UserGroupMappingRepository userGroupMappingRepository;
 
 	@Override
-	public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
+	public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) {
 		// 이용권 시작 일시 1일 전 user group 내 각 사용자에게 이용권을 추가해줍니다.
 		final LocalDateTime startedAt = LocalDateTime.now().minusDays(1);
 		List<BulkPassEntity> bulkPassEntities = bulkPassRepository.findByStatusAndStartedAtGreaterThan(
